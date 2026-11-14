@@ -1,0 +1,9 @@
+# Only the public/ folder is served. Nothing else needs uploading.
+tools
+build
+tests
+legacy-delphi-vcl
+src
+scripts
+docs
+.claude

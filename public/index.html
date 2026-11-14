@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TradeSpace: the space mission design game</title>
+<meta name="description" content="Design, fly and review a complete space mission. Balance science, mass, power, data, money and time, then find out why it worked. Built for the 2026 NASA Space Apps Challenge.">
+<meta name="theme-color" content="#070b14">
+<!-- Metadata required by the NASA Space Apps rules on AI assistance -->
+<meta name="generator" content="pas2js (Object Pascal compiled to JavaScript)">
+<meta name="ai-assistance" content="Code, text and procedural graphics in this project were written with the help of Claude (Anthropic). No AI-generated images, audio or video are used. See the About panel and README.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/tradespace.css">
+</head>
+<body>
+<canvas id="cv-stars" aria-hidden="true"></canvas>
+<div id="app" aria-live="polite">
+  <div class="boot">
+    <div class="boot-mark">TRADE<span>SPACE</span></div>
+    <p>Loading mission control&hellip;</p>
+    <noscript><p>This game needs JavaScript to run.</p></noscript>
+  </div>
+</div>
+<div id="modal" class="modal-root" hidden></div>
+<div id="toast" class="toast" role="status" hidden></div>
+<script src="js/tradespace.js"></script>
+<script>
+  // The whole game is Object Pascal, compiled to js/tradespace.js by pas2js.
+  // This line only starts the Pascal program.
+  window.addEventListener('load', function () { rtl.run(); });
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+LAUNCH_SKY RCDATA "assets\launch_sky.jpg"
+CLOUD_1 RCDATA "assets\cloud_1.png"
+CLOUD_2 RCDATA "assets\cloud_2.png"
+CLOUD_3 RCDATA "assets\cloud_3.png"
+ROCKET_BODY RCDATA "assets\rocket_body.png"
+ROCKET_LEFT RCDATA "assets\rocket_left.png"
+ROCKET_RIGHT RCDATA "assets\rocket_right.png"

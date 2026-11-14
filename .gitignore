@@ -1,0 +1,27 @@
+# Compiler and build output
+tools/
+build/
+tests/out/
+
+# Local tooling
+.vercel/
+.claude/
+node_modules/
+
+# Delphi IDE leftovers from the original Windows prototype
+legacy-delphi-vcl/Win32/
+legacy-delphi-vcl/__history/
+*.dcu
+*.exe
+*.identcache
+*.local
+
+# Prototype files that embed artwork whose source has not been confirmed yet.
+# See legacy-delphi-vcl/README.md before adding them back.
+legacy-delphi-vcl/Unit1.dfm
+legacy-delphi-vcl/Project1.res
+legacy-delphi-vcl/SceneAssets.res
+legacy-delphi-vcl/assets/rocket_*.png
+
+.vercel
+.env*
