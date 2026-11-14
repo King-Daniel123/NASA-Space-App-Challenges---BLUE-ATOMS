@@ -5385,6 +5385,8 @@ rtl.module("TsSim",["System","TsTypes"],function () {
     this.ExtendedWeeks = 0;
     this.InstrLost = 0;
     this.StormsRidden = 0;
+    this.DragStorms = 0;
+    this.FlareHits = 0;
     this.HasPending = false;
     this.DevLeft = 0;
     this.DevDone = false;
@@ -5413,7 +5415,7 @@ rtl.module("TsSim",["System","TsTypes"],function () {
       return r;
     };
     this.$eq = function (b) {
-      return this.D.$eq(b.D) && this.A.$eq(b.A) && (this.Phase === b.Phase) && (this.Week === b.Week) && (this.SciWeek === b.SciWeek) && (this.PlanWeeks === b.PlanWeeks) && (this.CruiseWeeks === b.CruiseWeeks) && (this.Rng === b.Rng) && (this.Alive === b.Alive) && (this.LostAtLaunch === b.LostAtLaunch) && (this.LostAtArrival === b.LostAtArrival) && (this.EndReason === b.EndReason) && (this.EventCostM === b.EventCostM) && (this.OpsCostM === b.OpsCostM) && (this.DelayYears === b.DelayYears) && (this.LaunchYear === b.LaunchYear) && (this.Late === b.Late) && (this.GrowthKg === b.GrowthKg) && (this.DryKg === b.DryKg) && (this.PropKg === b.PropKg) && (this.DvLeft === b.DvLeft) && (this.DvStart === b.DvStart) && (this.SciQuality === b.SciQuality) && (this.RateFactor === b.RateFactor) && (this.SolarLoss === b.SolarLoss) && (this.FailMult === b.FailMult) && (this.PointTier === b.PointTier) && (this.InstrAlive === b.InstrAlive) && rtl.arrayEq(this.Cap,b.Cap) && (this.SafeWeeks === b.SafeWeeks) && (this.HalfLinkWeeks === b.HalfLinkWeeks) && (this.BlackoutWeeks === b.BlackoutWeeks) && (this.SlowWeeks === b.SlowWeeks) && (this.DustWeeks === b.DustWeeks) && (this.Dose === b.Dose) && (this.DoseLimit === b.DoseLimit) && (this.DragLimitYears === b.DragLimitYears) && (this.BatteryAged === b.BatteryAged) && (this.StorageGbit === b.StorageGbit) && (this.PhaseDays === b.PhaseDays) && rtl.arrayEq(this.Completion,b.Completion) && rtl.arrayEq(this.Realized,b.Realized) && (this.BonusPct === b.BonusPct) && (this.SciencePct === b.SciencePct) && (this.GenGbit === b.GenGbit) && (this.DownGbit === b.DownGbit) && (this.LostGbit === b.LostGbit) && (this.PowerSum === b.PowerSum) && (this.SafeTotal === b.SafeTotal) && (this.Anomalies === b.Anomalies) && (this.EventsSeen === b.EventsSeen) && (this.ExtendedWeeks === b.ExtendedWeeks) && (this.InstrLost === b.InstrLost) && (this.StormsRidden === b.StormsRidden) && (this.HistScience === b.HistScience) && (this.HistPower === b.HistPower) && (this.HistData === b.HistData) && (this.HistStore === b.HistStore) && (this.HistDv === b.HistDv) && (this.Log === b.Log) && (this.HasPending === b.HasPending) && this.Pending.$eq(b.Pending) && rtl.arrayEq(this.Used,b.Used) && rtl.arrayEq(this.DecWeek,b.DecWeek) && (this.DevLeft === b.DevLeft) && (this.DevDone === b.DevDone) && (this.EarthIdx === b.EarthIdx) && (this.ConjCycle === b.ConjCycle) && (this.DustDone === b.DustDone) && (this.FlybyDone === b.FlybyDone) && (this.HalfDone === b.HalfDone);
+      return this.D.$eq(b.D) && this.A.$eq(b.A) && (this.Phase === b.Phase) && (this.Week === b.Week) && (this.SciWeek === b.SciWeek) && (this.PlanWeeks === b.PlanWeeks) && (this.CruiseWeeks === b.CruiseWeeks) && (this.Rng === b.Rng) && (this.Alive === b.Alive) && (this.LostAtLaunch === b.LostAtLaunch) && (this.LostAtArrival === b.LostAtArrival) && (this.EndReason === b.EndReason) && (this.EventCostM === b.EventCostM) && (this.OpsCostM === b.OpsCostM) && (this.DelayYears === b.DelayYears) && (this.LaunchYear === b.LaunchYear) && (this.Late === b.Late) && (this.GrowthKg === b.GrowthKg) && (this.DryKg === b.DryKg) && (this.PropKg === b.PropKg) && (this.DvLeft === b.DvLeft) && (this.DvStart === b.DvStart) && (this.SciQuality === b.SciQuality) && (this.RateFactor === b.RateFactor) && (this.SolarLoss === b.SolarLoss) && (this.FailMult === b.FailMult) && (this.PointTier === b.PointTier) && (this.InstrAlive === b.InstrAlive) && rtl.arrayEq(this.Cap,b.Cap) && (this.SafeWeeks === b.SafeWeeks) && (this.HalfLinkWeeks === b.HalfLinkWeeks) && (this.BlackoutWeeks === b.BlackoutWeeks) && (this.SlowWeeks === b.SlowWeeks) && (this.DustWeeks === b.DustWeeks) && (this.Dose === b.Dose) && (this.DoseLimit === b.DoseLimit) && (this.DragLimitYears === b.DragLimitYears) && (this.BatteryAged === b.BatteryAged) && (this.StorageGbit === b.StorageGbit) && (this.PhaseDays === b.PhaseDays) && rtl.arrayEq(this.Completion,b.Completion) && rtl.arrayEq(this.Realized,b.Realized) && (this.BonusPct === b.BonusPct) && (this.SciencePct === b.SciencePct) && (this.GenGbit === b.GenGbit) && (this.DownGbit === b.DownGbit) && (this.LostGbit === b.LostGbit) && (this.PowerSum === b.PowerSum) && (this.SafeTotal === b.SafeTotal) && (this.Anomalies === b.Anomalies) && (this.EventsSeen === b.EventsSeen) && (this.ExtendedWeeks === b.ExtendedWeeks) && (this.InstrLost === b.InstrLost) && (this.StormsRidden === b.StormsRidden) && (this.DragStorms === b.DragStorms) && (this.FlareHits === b.FlareHits) && (this.HistScience === b.HistScience) && (this.HistPower === b.HistPower) && (this.HistData === b.HistData) && (this.HistStore === b.HistStore) && (this.HistDv === b.HistDv) && (this.Log === b.Log) && (this.HasPending === b.HasPending) && this.Pending.$eq(b.Pending) && rtl.arrayEq(this.Used,b.Used) && rtl.arrayEq(this.DecWeek,b.DecWeek) && (this.DevLeft === b.DevLeft) && (this.DevDone === b.DevDone) && (this.EarthIdx === b.EarthIdx) && (this.ConjCycle === b.ConjCycle) && (this.DustDone === b.DustDone) && (this.FlybyDone === b.FlybyDone) && (this.HalfDone === b.HalfDone);
     };
     this.$assign = function (s) {
       this.D.$assign(s.D);
@@ -5470,6 +5472,8 @@ rtl.module("TsSim",["System","TsTypes"],function () {
       this.ExtendedWeeks = s.ExtendedWeeks;
       this.InstrLost = s.InstrLost;
       this.StormsRidden = s.StormsRidden;
+      this.DragStorms = s.DragStorms;
+      this.FlareHits = s.FlareHits;
       this.HistScience = rtl.arrayRef(s.HistScience);
       this.HistPower = rtl.arrayRef(s.HistPower);
       this.HistData = rtl.arrayRef(s.HistData);
@@ -5558,6 +5562,8 @@ rtl.module("TsSim",["System","TsTypes"],function () {
     S.ExtendedWeeks = 0;
     S.InstrLost = 0;
     S.StormsRidden = 0;
+    S.DragStorms = 0;
+    S.FlareHits = 0;
     S.HistScience = rtl.arraySetLength(S.HistScience,0.0,0);
     S.HistPower = rtl.arraySetLength(S.HistPower,0.0,0);
     S.HistData = rtl.arraySetLength(S.HistData,0.0,0);
@@ -6148,12 +6154,14 @@ rtl.module("TsSim",["System","TsTypes"],function () {
           if (S.DvLeft > 2) {
             S.DvLeft = S.DvLeft - (2 * W.Strength)}
            else if (S.DragLimitYears > 0) S.DragLimitYears = S.DragLimitYears - 0.04;
-          if (!Logged && ($impl.Rnd(S) < 0.5)) {
+          S.DragStorms += 1;
+          if (!Logged && (S.DragStorms === 1)) {
             $impl.LogEvent(S,4,"Geomagnetic storm raised the drag","A storm in Earth's magnetic field heated the upper atmosphere, which swelled upward. " + "Drag on your low-flying satellite jumped for several days.","Real event: " + pas.TsScenarios.WeatherLabel(W) + " (" + pas.TsScenarios.SpaceWeatherSource + ")","In February 2022 a storm like this brought down 38 newly launched Starlink satellites.",3);
             Logged = true;
           };
         } else if ((W.Kind === "FLR") && (W.Strength >= 0.5) && InScience) {
-          if (!Logged && ($impl.Rnd(S) < 0.2)) {
+          S.FlareHits += 1;
+          if (!Logged && (S.FlareHits === 1)) {
             $impl.LogEvent(S,4,"Solar flare disturbed the radio link","An X-class flare bathed Earth's daylit side in X-rays and garbled a ground-station pass.","Real event: " + pas.TsScenarios.WeatherLabel(W) + " (" + pas.TsScenarios.SpaceWeatherSource + ")","",3);
             Logged = true;
           };
@@ -6706,7 +6714,7 @@ rtl.module("TsScore",["System","TsTypes","TsSim"],function () {
     Ratio = (S.SciencePct / 100) / pas.TsTypes.MaxD(0.05,C.FinalCostM / C.CapM);
     C.Efficiency = pas.TsTypes.Clamp(70 * Ratio,0,100);
     C.Total = Math.round(10 * ((0.45 * C.Science) + (0.15 * C.Survival) + (0.15 * C.Budget) + (0.15 * C.Engineering) + (0.1 * C.Efficiency)));
-    if ((S.SciencePct < Sc.ThresholdPct) && (C.Total > 549)) C.Total = 549;
+    if ((S.SciencePct < Sc.ThresholdPct) && (C.Total > 619)) C.Total = 619;
     C.Grade = $mod.GradeOf(C.Total);
     C.Stars = $mod.StarsOf(C.Total);
     var $tmp = C.Stars;
@@ -6785,6 +6793,7 @@ rtl.module("TsScore",["System","TsTypes","TsSim"],function () {
       $impl.AddInsight(C,1,"You bought more rocket than you needed","The spacecraft used " + pas.TsFmt.FmtPct(1 - A.MassMargin) + " of what " + L.Name + " can lift, for " + pas.TsFmt.FmtMoney(A.CostLaunch) + ".","A smaller launcher or a shared ride could free up money for instruments.")}
      else if (HasLv && (A.MassMargin < 0.1) && (A.MassMargin >= 0)) $impl.AddInsight(C,1,"You launched with almost no mass margin","Only " + pas.TsFmt.FmtPct(A.MassMargin) + " spare, and the spacecraft then grew by " + pas.TsFmt.FmtMass(S.GrowthKg) + " during development.","Mass growth of 10 to 25 % is normal. Plan for it.");
     if (S.StormsRidden > 0) $impl.AddInsight(C,0,"Rode out " + pas.TsFmt.Plural(S.StormsRidden,"real solar storm","real solar storms"),"Particle storms recorded in NASA's DONKI database swept over the spacecraft. Its radiation protection held every time, " + "at the price of a little solar panel output.","");
+    if (S.DragStorms > 0) $impl.AddInsight(C,1,pas.TsFmt.Plural(S.DragStorms,"real geomagnetic storm","real geomagnetic storms") + " raised the drag","Each storm in NASA's DONKI record swelled Earth's upper atmosphere and slowed your low-flying satellite a little, " + "costing propellant or orbit lifetime.","A higher orbit feels less drag. Propulsion lets you make up for it.");
     if (S.ExtendedWeeks > 0) $impl.AddInsight(C,0,"The extended mission paid off","Flying on for another " + pas.TsFmt.FmtYears(S.ExtendedWeeks / 52) + " cost only the operations budget, because the spacecraft was already built and already there.","");
     C.Analog = -1;
     C.AnalogText = "";
@@ -6823,30 +6832,30 @@ rtl.module("TsScore",["System","TsTypes","TsSim"],function () {
   };
   this.GradeOf = function (Total) {
     var Result = "";
-    if (Total >= 900) {
+    if (Total >= 920) {
       Result = "S"}
-     else if (Total >= 800) {
+     else if (Total >= 850) {
       Result = "A"}
-     else if (Total >= 680) {
+     else if (Total >= 740) {
       Result = "B"}
-     else if (Total >= 550) {
+     else if (Total >= 620) {
       Result = "C"}
-     else if (Total >= 400) {
+     else if (Total >= 480) {
       Result = "D"}
      else Result = "F";
     return Result;
   };
   this.StarsOf = function (Total) {
     var Result = 0;
-    if (Total >= 900) {
+    if (Total >= 920) {
       Result = 5}
-     else if (Total >= 800) {
+     else if (Total >= 850) {
       Result = 4}
-     else if (Total >= 680) {
+     else if (Total >= 740) {
       Result = 3}
-     else if (Total >= 550) {
+     else if (Total >= 620) {
       Result = 2}
-     else if (Total >= 400) {
+     else if (Total >= 480) {
       Result = 1}
      else Result = 0;
     return Result;

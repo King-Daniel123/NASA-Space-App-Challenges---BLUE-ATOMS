@@ -61,21 +61,21 @@ uses
 
 function GradeOf(Total: Integer): string;
 begin
-  if Total >= 900 then Result := 'S'
-  else if Total >= 800 then Result := 'A'
-  else if Total >= 680 then Result := 'B'
-  else if Total >= 550 then Result := 'C'
-  else if Total >= 400 then Result := 'D'
+  if Total >= 920 then Result := 'S'
+  else if Total >= 850 then Result := 'A'
+  else if Total >= 740 then Result := 'B'
+  else if Total >= 620 then Result := 'C'
+  else if Total >= 480 then Result := 'D'
   else Result := 'F';
 end;
 
 function StarsOf(Total: Integer): Integer;
 begin
-  if Total >= 900 then Result := 5
-  else if Total >= 800 then Result := 4
-  else if Total >= 680 then Result := 3
-  else if Total >= 550 then Result := 2
-  else if Total >= 400 then Result := 1
+  if Total >= 920 then Result := 5
+  else if Total >= 850 then Result := 4
+  else if Total >= 740 then Result := 3
+  else if Total >= 620 then Result := 2
+  else if Total >= 480 then Result := 1
   else Result := 0;
 end;
 
@@ -185,8 +185,8 @@ begin
     ScoreWeightEfficiency * C.Efficiency));
   { A mission that misses its minimum science cannot rate better than a D,
     however tidy the engineering was. }
-  if (S.SciencePct < Sc.ThresholdPct) and (C.Total > 549) then
-    C.Total := 549;
+  if (S.SciencePct < Sc.ThresholdPct) and (C.Total > 619) then
+    C.Total := 619;
   C.Grade := GradeOf(C.Total);
   C.Stars := StarsOf(C.Total);
   case C.Stars of
@@ -355,6 +355,11 @@ begin
     AddInsight(C, svGood, 'Rode out ' + Plural(S.StormsRidden, 'real solar storm', 'real solar storms'),
       'Particle storms recorded in NASA''s DONKI database swept over the spacecraft. Its radiation protection held every time, ' +
       'at the price of a little solar panel output.', '');
+  if S.DragStorms > 0 then
+    AddInsight(C, svInfo, Plural(S.DragStorms, 'real geomagnetic storm', 'real geomagnetic storms') + ' raised the drag',
+      'Each storm in NASA''s DONKI record swelled Earth''s upper atmosphere and slowed your low-flying satellite a little, ' +
+      'costing propellant or orbit lifetime.',
+      'A higher orbit feels less drag. Propulsion lets you make up for it.');
 
   if S.ExtendedWeeks > 0 then
     AddInsight(C, svGood, 'The extended mission paid off',

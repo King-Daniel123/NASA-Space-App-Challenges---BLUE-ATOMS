@@ -346,7 +346,9 @@ input[type=range] { width: 100%; accent-color: var(--accent); margin: 10px 0 4px
 .progress i { display: block; height: 100%; background: var(--accent); width: 0; transition: width 0.2s; }
 .log { display: flex; flex-direction: column; gap: 8px; }
 .log-item { border-left: 3px solid var(--line2); background: var(--panel); border-radius: 0 10px 10px 0; padding: 9px 12px; animation: slidein 0.25s ease-out; }
-@keyframes slidein { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+/* Position only, never opacity: if a browser pauses animations in a background
+   tab, the newest log entries must still be readable. */
+@keyframes slidein { from { transform: translateY(-6px); } to { transform: none; } }
 .log-item.tn-good { border-left-color: var(--good); }
 .log-item.tn-warn { border-left-color: var(--warn); }
 .log-item.tn-bad { border-left-color: var(--bad); }

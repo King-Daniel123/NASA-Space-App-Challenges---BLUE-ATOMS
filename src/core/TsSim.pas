@@ -97,6 +97,7 @@ type
     SafeTotal, Anomalies, EventsSeen, ExtendedWeeks: Integer;
     InstrLost: Integer;
     StormsRidden: Integer;       // real particle storms the protected electronics shrugged off
+    DragStorms, FlareHits: Integer; // real geomagnetic storms and flares that touched the mission
     { one sample per science week, for the charts }
     HistScience, HistPower, HistData, HistStore, HistDv: TDoubleArray;
     Log: TSimEventArray;
@@ -382,6 +383,8 @@ begin
   S.ExtendedWeeks := 0;
   S.InstrLost := 0;
   S.StormsRidden := 0;
+  S.DragStorms := 0;
+  S.FlareHits := 0;
   SetLength(S.HistScience, 0);
   SetLength(S.HistPower, 0);
   SetLength(S.HistData, 0);
@@ -754,7 +757,9 @@ begin
         S.DvLeft := S.DvLeft - 2 * W.Strength
       else if S.DragLimitYears > 0 then
         S.DragLimitYears := S.DragLimitYears - 0.04;
-      if (not Logged) and (Rnd(S) < 0.5) then
+      Inc(S.DragStorms);
+      { Tell the story the first time. After that the storms are counted. }
+      if (not Logged) and (S.DragStorms = 1) then
       begin
         LogEvent(S, tnReal, 'Geomagnetic storm raised the drag',
           'A storm in Earth''s magnetic field heated the upper atmosphere, which swelled upward. ' +
@@ -766,7 +771,8 @@ begin
     end
     else if (W.Kind = 'FLR') and (W.Strength >= 0.5) and InScience then
     begin
-      if (not Logged) and (Rnd(S) < 0.2) then
+      Inc(S.FlareHits);
+      if (not Logged) and (S.FlareHits = 1) then
       begin
         LogEvent(S, tnReal, 'Solar flare disturbed the radio link',
           'An X-class flare bathed Earth''s daylit side in X-rays and garbled a ground-station pass.',
