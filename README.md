@@ -250,7 +250,7 @@ from a link. The full list of faults is in
 
 - [x] Read the challenge, its resources tab, the judging guide and the submission guide.
 - [x] Moved from a Windows program to Object Pascal compiled for the browser, so the game stays in Pascal and runs from a link.
-- [x] Mission engine: catalogue, analysis, review findings, simulation, scoring (about 4,000 lines), with 750 automated checks.
+- [x] Mission engine: catalogue, analysis, review findings, simulation, scoring (about 5,000 lines of Object Pascal, out of roughly 10,000 in the project), with 750 automated checks.
 - [x] Five missions, 15 instruments, 12 launch vehicles, 40 subsystem options, 27 glossary terms.
 - [x] Live NASA data in the gameplay: EONET, DONKI, NeoWs, GIBS.
 - [x] All screens: title, setup, briefing, design lab, review board, mission control, report, mission log.
