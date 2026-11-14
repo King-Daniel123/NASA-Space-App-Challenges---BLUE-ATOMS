@@ -10365,9 +10365,7 @@ rtl.module("WebApp",["System","JS","Web","SysUtils","Math","TsTypes"],function (
       if (Name === "sandbox") {
         pas.WebState.Sandbox = T.checked;
         this.Render();
-      } else if ((Name === "solar") || (Name === "battery") || (Name === "life") || (Name === "reserve")) {
-        this.RenderLab(true)}
-       else if (Name === "pname") this.Render();
+      } else if ((Name === "solar") || (Name === "battery") || (Name === "life") || (Name === "reserve")) this.RenderLab(true);
       return Result;
     };
     this.OnKey = function (Ev) {
@@ -10844,7 +10842,7 @@ rtl.module("WebApp",["System","JS","Web","SysUtils","Math","TsTypes"],function (
         pas.WebState.A.$assign(pas.TsEngine.Analyze(pas.WebState.D));
         pas.WebState.HasPrev = false;
       };
-      if ((pas.WebState.Screen === 0) || (pas.WebState.Screen === 1) || (pas.WebState.Screen === 2)) {
+      if ((pas.WebState.Screen === 0) || (pas.WebState.Screen === 2)) {
         this.Render()}
        else if (pas.WebState.Screen === 3) this.RenderLab(true);
     };

@@ -139,7 +139,8 @@ begin
     A := Analyze(D);
     HasPrev := False;
   end;
-  if (Screen = scTitle) or (Screen = scSetup) or (Screen = scBrief) then
+  { The setup screen is left alone so a name being typed is not interrupted. }
+  if (Screen = scTitle) or (Screen = scBrief) then
     Render
   else if Screen = scLab then
     RenderLab(True);
@@ -330,9 +331,7 @@ begin
     Render;
   end
   else if (Name = 'solar') or (Name = 'battery') or (Name = 'life') or (Name = 'reserve') then
-    RenderLab(True)   // slider released: refresh the findings in the tab too
-  else if Name = 'pname' then
-    Render;
+    RenderLab(True);  // slider released: refresh the findings in the tab too
 end;
 
 function TGame.OnKey(Ev: TEventListenerEvent): Boolean;
