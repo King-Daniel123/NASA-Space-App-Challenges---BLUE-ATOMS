@@ -168,13 +168,19 @@ begin
 
   FBackButton := TButton.Create(Self);
   FBackButton.Parent := ControlPanel;
-  FBackButton.SetBounds(688, 70, 188, 30);
+  FBackButton.SetBounds(StartButton.Left,
+    StartButton.Top + StartButton.Height + MulDiv(6, CurrentPPI, 96),
+    ResetButton.Left + ResetButton.Width - StartButton.Left,
+    MulDiv(28, CurrentPPI, 96));
   FBackButton.Caption := '< Back to design';
   FBackButton.OnClick := BackClick;
 
   FContinueButton := TButton.Create(Self);
   FContinueButton.Parent := Self;
-  FContinueButton.SetBounds(20, 572, 300, 48);
+  FContinueButton.SetBounds(MulDiv(20, CurrentPPI, 96),
+    ClientHeight - MulDiv(78, CurrentPPI, 96),
+    MulDiv(330, CurrentPPI, 96), MulDiv(48, CurrentPPI, 96));
+  FContinueButton.Anchors := [akLeft, akBottom];
   FContinueButton.Caption := 'Orbit reached: continue to the Moon >';
   FContinueButton.Font.Size := 11;
   FContinueButton.Font.Style := [fsBold];
@@ -847,11 +853,11 @@ begin
   AccelerationLabel.Caption := 'Net accel: ' +
     FormatFloat('#,##0.00', FAcceleration) + ' m/s^2';
   if FHasParameters then
-    HelpLabel.Caption := 'Mass: ' + FormatFloat('#,##0.00', FMass) +
-      ' kg  |  Thrust: ' + FormatFloat('#,##0.00', FThrust) + ' N' +
-      '  |  Lift-off needs > ' + FormatFloat('#,##0.00', FMass * 9.81) +
-      ' N  |  T/W ' + FormatFloat('0.00', FThrust / Max(1, FMass * 9.81)) +
-      '  |  boosters separate at 100,000 ft';
+    HelpLabel.Caption := 'Mass ' + FormatFloat('#,##0', FMass / 1000) +
+      ' t  |  Thrust ' + FormatFloat('#,##0', FThrust / 1000) + ' kN' +
+      '  |  Weight ' + FormatFloat('#,##0', FMass * 9.81 / 1000) +
+      ' kN  |  T/W ' + FormatFloat('0.00', FThrust / Max(1, FMass * 9.81)) +
+      '  |  Boosters separate at 100,000 ft';
 end;
 
 procedure TfrmLaunch.UpdateFuelDisplay;

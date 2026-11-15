@@ -1,6 +1,6 @@
 unit WebApp;
 
-{ TradeSpace - the controller: reacts to clicks and sliders, moves between
+{ Atomic Space - the controller: reacts to clicks and sliders, moves between
   screens, runs the animation loop and steps the mission simulation.
 
   AI-assistance note: written with the help of Claude (Anthropic). }

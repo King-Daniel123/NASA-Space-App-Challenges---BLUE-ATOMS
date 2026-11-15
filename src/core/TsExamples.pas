@@ -1,6 +1,6 @@
 unit TsExamples;
 
-{ TradeSpace - one worked example design for each mission.
+{ Atomic Space - one worked example design for each mission.
 
   Each example "closes" (the review board approves it) but is deliberately
   modest, so players can load it, see a working design and then beat it.

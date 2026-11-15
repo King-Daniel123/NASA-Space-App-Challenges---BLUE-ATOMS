@@ -1,4 +1,4 @@
-# TradeSpace - compile the Object Pascal game to JavaScript.
+# Atomic Space - compile the Object Pascal game to JavaScript.
 #
 #   powershell -ExecutionPolicy Bypass -File scripts\build.ps1
 #

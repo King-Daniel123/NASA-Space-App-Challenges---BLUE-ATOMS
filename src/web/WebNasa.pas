@@ -1,6 +1,6 @@
 unit WebNasa;
 
-{ TradeSpace - loading open NASA data into the game.
+{ Atomic Space - loading open NASA data into the game.
 
   Three NASA services drive the gameplay:
     EONET  - real natural events on Earth become the targets of the

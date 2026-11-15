@@ -1,6 +1,6 @@
 unit TsScenarios;
 
-{ TradeSpace - the mission scenarios (announcements of opportunity).
+{ Atomic Space - the mission scenarios (announcements of opportunity).
 
   Each scenario describes a destination, a science goal, a cost cap, the
   orbits and routes on offer and the real missions it is modelled on.

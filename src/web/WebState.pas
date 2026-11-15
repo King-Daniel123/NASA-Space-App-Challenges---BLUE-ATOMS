@@ -1,6 +1,6 @@
 unit WebState;
 
-{ TradeSpace - the state of the game in the browser: which screen is showing,
+{ Atomic Space - the state of the game in the browser: which screen is showing,
   the design being worked on, the crew, and the mission being flown.
 
   AI-assistance note: written with the help of Claude (Anthropic). }

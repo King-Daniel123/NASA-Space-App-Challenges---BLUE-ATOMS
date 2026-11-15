@@ -1,6 +1,6 @@
 unit TsFmt;
 
-{ TradeSpace - number formatting that does not depend on the computer's
+{ Atomic Space - number formatting that does not depend on the computer's
   language settings, so it gives the same text in Delphi and in the browser.
 
   AI-assistance note: written with the help of Claude (Anthropic). }

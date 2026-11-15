@@ -1,6 +1,6 @@
 unit TsEngine;
 
-{ TradeSpace - the mission analysis engine.
+{ Atomic Space - the mission analysis engine.
 
   Analyze() takes every decision the player has made and works out whether the
   design "closes": mass, power, propellant (Tsiolkovsky rocket equation),

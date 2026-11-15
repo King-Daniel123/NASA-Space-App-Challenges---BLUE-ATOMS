@@ -1,6 +1,6 @@
 unit TsSim;
 
-{ TradeSpace - the mission simulation.
+{ Atomic Space - the mission simulation.
 
   Takes a reviewed design and flies it: development surprises, launch, cruise,
   arrival, then science operations one week at a time. Power fades, the data

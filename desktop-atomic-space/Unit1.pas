@@ -509,7 +509,7 @@ procedure TForm1.DrawText(X, Y: Integer; const Text: string; Size: Integer;
   TextColor: TColor; Bold: Boolean);
 begin
   Canvas.Font.Name := 'Segoe UI';
-  Canvas.Font.Size := Size;
+  Canvas.Font.Height := -MulDiv(Size, 96, 72); { fixed pixel size: the scene is laid out at 96 DPI }
   Canvas.Font.Color := TextColor;
   if Bold then
     Canvas.Font.Style := [fsBold]
@@ -773,12 +773,12 @@ begin
   Canvas.Pen.Color := RGB(104, 69, 143);
   Canvas.RoundRect(Box.Left, Box.Top, Box.Right, Box.Bottom, 18, 18);
   Canvas.Font.Name := 'Segoe UI';
-  Canvas.Font.Size := 24;
+  Canvas.Font.Height := -MulDiv(24, 96, 72); { fixed pixel size: the scene is laid out at 96 DPI }
   Canvas.Font.Style := [fsBold];
   TextWidth := Canvas.TextWidth(Title);
   DrawText(ClientWidth div 2 - TextWidth div 2, Box.Top + 35, Title,
     24, RGB(245, 238, 255), True);
-  Canvas.Font.Size := 11;
+  Canvas.Font.Height := -MulDiv(11, 96, 72); { fixed pixel size: the scene is laid out at 96 DPI }
   TextWidth := Canvas.TextWidth(Detail);
   DrawText(ClientWidth div 2 - TextWidth div 2, Box.Top + 91, Detail,
     11, RGB(196, 177, 216));
@@ -851,7 +851,7 @@ begin
   Canvas.Brush.Color := RGB(47, 30, 73);
   Canvas.RoundRect(X, Y, X + 58, Y + 25, 6, 6);
   Canvas.Font.Name := 'Segoe UI';
-  Canvas.Font.Size := 9;
+  Canvas.Font.Height := -MulDiv(9, 96, 72); { fixed pixel size: the scene is laid out at 96 DPI }
   Canvas.Font.Style := [fsBold];
   TextWidth := Canvas.TextWidth(Caption);
   DrawText(X + (58 - TextWidth) div 2, Y + 4, Caption, 9,

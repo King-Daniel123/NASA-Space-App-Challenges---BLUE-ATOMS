@@ -1,6 +1,6 @@
 unit WebStore;
 
-{ TradeSpace - saving the mission log and settings in the browser.
+{ Atomic Space - saving the mission log and settings in the browser.
 
   Everything stays on the player's own device (localStorage). Nothing is sent
   to a server and no account is needed.

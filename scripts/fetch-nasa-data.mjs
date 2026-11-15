@@ -1,4 +1,4 @@
-// TradeSpace - NASA data snapshot builder (build tool, not game code).
+// Atomic Space - NASA data snapshot builder (build tool, not game code).
 //
 // The game itself is written in Object Pascal. This small Node script only
 // downloads open NASA data so the game ships with a real, offline-safe
@@ -127,7 +127,7 @@ async function apophis() {
 let previous = {};
 try { previous = JSON.parse(await readFile(outFile, 'utf8')); } catch (err) { /* first run */ }
 
-const snapshot = { generated: today.toISOString(), note: 'Open NASA data snapshot for the TradeSpace game. Refreshed live in the browser when possible.' };
+const snapshot = { generated: today.toISOString(), note: 'Open NASA data snapshot for the Atomic Space game. Refreshed live in the browser when possible.' };
 for (const [name, fn] of [['eonet', eonet], ['donki', donki], ['apophis', apophis]]) {
   try {
     snapshot[name] = await fn();

@@ -14,17 +14,17 @@ Deadline: **Sunday 15 November 2026, 11:59 p.m.** local time. Press
 ## Project Name
 
 ```
-TradeSpace
+Atomic Space
 ```
 
 ## High-Level Project Summary
 
 ```
-TradeSpace is a browser game in which one to four players design, manage and fly a complete space mission. Players take a mission with a science goal, a cost cap and a deadline, then choose the orbit, instruments, spacecraft, power system, radio and rocket. Seven live gauges (cost, launch mass, power, data, science, schedule, odds) show how every choice changes the others, and a "ripple" line spells it out: add a radar and you gain science, but also mass, propellant, power demand, data volume and cost. A review board explains what will fail and why. Then the mission is built, launched and operated week by week, with decisions to make, and a final report explains the score and names the real mission the design most resembles.
+Atomic Space is a browser game in which one to four players design, manage and fly a complete space mission. Players take a mission with a science goal, a cost cap and a deadline, then choose the orbit, instruments, spacecraft, power system, radio and rocket. Seven live gauges (cost, launch mass, power, data, science, schedule, odds) show how every choice changes the others, and a "ripple" line spells it out: add a radar and you gain science, but also mass, propellant, power demand, data volume and cost. A review board explains what will fail and why. Then the mission is built, launched and operated week by week, with decisions to make, and a final report explains the score and names the real mission the design most resembles.
 
 NASA open data drives the play. Real natural events from EONET are the targets of the Earth mission and set its science priorities. Real solar storms from DONKI strike the spacecraft. The real 2029 Apophis flyby from NeoWs/JPL is the deadline of the asteroid mission.
 
-It matters because the trade-offs of mission design usually stay abstract for students. TradeSpace lets anyone with a browser try a whole mission in ten minutes, fail safely, understand why, and try again.
+It matters because the trade-offs of mission design usually stay abstract for students. Atomic Space lets anyone with a browser try a whole mission in ten minutes, fail safely, understand why, and try again.
 ```
 
 ## Link to Project Demo
@@ -53,7 +53,7 @@ Windows desktop edition (Delphi): `https://tradespace-blue-atoms.vercel.app/desk
 ```
 WHAT IT DOES
 
-TradeSpace walks a team through the life of a space mission, from concept to operations.
+Atomic Space walks a team through the life of a space mission, from concept to operations.
 
 1. Briefing. Five missions modelled on real ones: Disaster Watch (Earth orbit), Ice Prospector (Moon), Follow the Water (Mars), Race to Apophis (asteroid), Ocean World (Europa). Each gives an objective, science priorities, a cost cap, a deadline and the facts that make the destination hard.
 
@@ -87,7 +87,7 @@ The whole game is written in Object Pascal (the Delphi language) and compiled to
 
 DESKTOP EDITION
 
-Atomic Space, our original Windows game, is built in Delphi 12 (VCL) and can be downloaded from https://tradespace-blue-atoms.vercel.app/desktop. Players choose one of three lunar missions modelled on NASA's CAPSTONE, LRO and CLPS, then build a rocket from 18 combinations of ship, thruster and booster count. A live review board checks thrust-to-weight, budget, payload and fuel margin, and up to four players sign off by role. Then they fly the launch with staging, hold lunar orbit, land, and get a scored report that explains the result.
+The desktop edition of Atomic Space, our original Windows game, is built in Delphi 12 (VCL) and can be downloaded from https://tradespace-blue-atoms.vercel.app/desktop. Players choose one of three lunar missions modelled on NASA's CAPSTONE, LRO and CLPS, then build a rocket from 18 combinations of ship, thruster and booster count. A live review board checks thrust-to-weight, budget, payload and fuel margin, and up to four players sign off by role. Then they fly the launch with staging, hold lunar orbit, land, and get a scored report that explains the result.
 ```
 
 ## Use of AI (the form calls it "Super Intelligence")

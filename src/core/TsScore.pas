@@ -1,6 +1,6 @@
 unit TsScore;
 
-{ TradeSpace - scoring and the post-mission analysis.
+{ Atomic Space - scoring and the post-mission analysis.
 
   Turns a finished simulation into a score card, explains in plain language
   why the mission did well or badly, finds the real mission it most resembles

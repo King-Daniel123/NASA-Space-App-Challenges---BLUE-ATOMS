@@ -1,6 +1,6 @@
 unit TsTypes;
 
-{ TradeSpace - shared types for the mission engine.
+{ Atomic Space - shared types for the mission engine.
 
   This unit is plain Object Pascal with no browser dependencies, so it can be
   compiled by Delphi, Free Pascal or pas2js.
@@ -13,7 +13,7 @@ unit TsTypes;
 interface
 
 const
-  GameName = 'TradeSpace';
+  GameName = 'Atomic Space';
   GameTagline = 'Design it. Fly it. Find out why.';
   GameVersion = '1.0';
 

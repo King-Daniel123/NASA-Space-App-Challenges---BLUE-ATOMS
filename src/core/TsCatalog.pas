@@ -1,6 +1,6 @@
 unit TsCatalog;
 
-{ TradeSpace - the catalogue of things a mission can be built from:
+{ Atomic Space - the catalogue of things a mission can be built from:
   science instruments, spacecraft subsystems, launch vehicles and a glossary.
 
   Figures are simplified from publicly available NASA and partner-agency

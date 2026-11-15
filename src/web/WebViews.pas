@@ -1,6 +1,6 @@
 unit WebViews;
 
-{ TradeSpace - the screens of the game, built as HTML text in Object Pascal.
+{ Atomic Space - the screens of the game, built as HTML text in Object Pascal.
 
   Each function returns the markup for one screen or one part of a screen.
   WebApp puts it on the page and reacts to clicks (every button carries a
@@ -54,7 +54,7 @@ var
   Cls: string;
 begin
   Result := '<header class="topbar">' +
-    '<button type="button" class="brand" data-act="home" title="Back to the start">TRADE<span>SPACE</span></button>';
+    '<button type="button" class="brand" data-act="home" title="Back to the start">ATOMIC<span>SPACE</span></button>';
   if Phase >= 0 then
   begin
     Result := Result + '<nav class="phase-track" aria-label="Mission phases">';
@@ -77,7 +77,7 @@ end;
 
 function Footer: string;
 begin
-  Result := '<footer class="foot">TradeSpace was made for the 2026 NASA Space Apps Challenge. ' +
+  Result := '<footer class="foot">Atomic Space was made for the 2026 NASA Space Apps Challenge. ' +
     'It is not affiliated with or endorsed by NASA. Data: NASA EONET, DONKI, NeoWs and GIBS. ' +
     '<button type="button" class="btn btn-ghost btn-small" data-act="about">About, sources and AI disclosure</button></footer>';
 end;
@@ -300,7 +300,7 @@ begin
     Live := 'loading';
   Result := TopBar(-1) +
     '<main class="hero">' +
-    '<h1 class="hero-mark">TRADE<span>SPACE</span></h1>' +
+    '<h1 class="hero-mark">ATOMIC<span>SPACE</span></h1>' +
     '<p class="hero-tag">' + GameTagline + '</p>' +
     '<p class="hero-sub">Build a whole space mission, from the science question to the last day of operations. ' +
     'Every gram, watt and dollar you spend on one thing is taken from another. For one to four players.</p>' +
@@ -1612,8 +1612,8 @@ end;
 
 function ModalAbout: string;
 begin
-  Result := ModalShell('About TradeSpace',
-    '<p>TradeSpace was built for the 2026 NASA Space Apps Challenge, &ldquo;Space Mission Design Game&rdquo;. It is not affiliated with or endorsed by NASA.</p>' +
+  Result := ModalShell('About Atomic Space',
+    '<p>Atomic Space was built for the 2026 NASA Space Apps Challenge, &ldquo;Space Mission Design Game&rdquo;. It is not affiliated with or endorsed by NASA.</p>' +
     '<p>The whole game is written in Object Pascal (the Delphi language) and compiled for the browser with the open-source pas2js compiler.</p>' +
     '<dl class="gloss"><dt>NASA data used while you play</dt>' +
     '<dd>' + Link('https://eonet.gsfc.nasa.gov/', 'EONET') + ': real natural events are the targets and set the science priorities of Disaster Watch.</dd>' +

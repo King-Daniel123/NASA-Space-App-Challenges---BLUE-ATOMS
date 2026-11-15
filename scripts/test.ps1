@@ -1,4 +1,4 @@
-# TradeSpace - compile the mission engine for Node.js and run its tests.
+# Atomic Space - compile the mission engine for Node.js and run its tests.
 #
 #   powershell -ExecutionPolicy Bypass -File scripts\test.ps1
 #

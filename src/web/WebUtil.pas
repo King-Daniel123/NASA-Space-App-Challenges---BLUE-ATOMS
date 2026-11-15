@@ -1,6 +1,6 @@
 unit WebUtil;
 
-{ TradeSpace - small helpers for building the page from Object Pascal.
+{ Atomic Space - small helpers for building the page from Object Pascal.
 
   This unit talks to the browser (through pas2js's Web and JS units), so it is
   compiled only for the web game, not for the Delphi/Node core tests.

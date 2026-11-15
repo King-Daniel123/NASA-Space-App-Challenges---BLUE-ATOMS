@@ -1,4 +1,6 @@
-# TradeSpace
+# Atomic Space
+
+![Blue Atoms](public/assets/blue-atoms-logo.png)
 
 **Design it. Fly it. Find out why.**
 
@@ -11,7 +13,7 @@ A space mission design game for one to four players, written in Object Pascal
 
 Built by team **Blue Atoms** for the 2026 NASA Space Apps Challenge,
 [Space Mission Design Game](https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/).
-TradeSpace is not affiliated with or endorsed by NASA.
+Atomic Space is not affiliated with or endorsed by NASA.
 
 ---
 
@@ -58,7 +60,7 @@ Five missions, each modelled on real ones:
 
 ## How it answers the challenge
 
-| The challenge asks for | In TradeSpace |
+| The challenge asks for | In Atomic Space |
 | --- | --- |
 | Define a mission objective first | Every game starts with a briefing: objective, science priorities, cost cap, deadline. |
 | Design a spacecraft with real subsystems | Bus, propulsion, attitude control, thermal, radiation shielding, power, antenna, radio band, transmitter, computer and recorder. Simple and advanced options for each. |
@@ -212,8 +214,8 @@ a mission's `Offer` list in `TsScenarios.pas`.
 **Download: https://tradespace-blue-atoms.vercel.app/desktop**
 (Windows 10/11, 15 MB zip, no install). Source: [desktop-atomic-space/](desktop-atomic-space/).
 
-*Atomic Space* is the team's original Windows game, built in Delphi 12 (VCL).
-It is the same idea as TradeSpace at a smaller scale: one destination (the
+The desktop edition is the team's original Windows game, built in Delphi 12 (VCL).
+It is the same idea as the browser edition at a smaller scale: one destination (the
 Moon), three missions, and a launch and landing you fly yourself.
 
 | Step | What happens | Trade-off it teaches |
@@ -280,7 +282,7 @@ no build command). After that, every push to `main` redeploys.
 git init
 git branch -M main
 git add .
-git commit -m "TradeSpace: space mission design game"
+git commit -m "Atomic Space: space mission design game"
 git remote add origin https://github.com/King-Daniel123/NASA-Space-App-Challenges---BLUE-ATOMS.git
 git push -u origin main
 ```
@@ -297,7 +299,7 @@ and as a Windows `.exe` could not be hosted on Vercel or opened by a judge
 from a link. The full list of faults is in
 [legacy-delphi-vcl/README.md](legacy-delphi-vcl/README.md).
 
-In parallel the team built *Atomic Space*, a larger Delphi VCL game with a
+In parallel the team built the first *Atomic Space*, a larger Delphi VCL game with a
 rocket builder, a launch scene and a Moon landing, but with no mission
 objectives, no budget or review, and a few bugs. Those are fixed and
 listed in [desktop-atomic-space/README.md](desktop-atomic-space/README.md).
@@ -331,7 +333,7 @@ press *Submit for Judging* before **Sunday 15 November, 11:59 p.m.** local time.
 5. **More missions.** A space telescope at L2 (pointing and cooling drive everything), a Venus orbiter (heat), a comet sample return. Each is one procedure in `TsScenarios.pas`.
 6. **Sound.** Countdown, engine rumble, alerts. Add with care: the rules require any AI-made audio to be declared.
 7. **Phone layout polish.** It works on a phone, but the design lab is built for a laptop screen.
-8. **One engine for both editions.** The desktop edition now exists (`desktop-atomic-space/`) with its own small rule set. Next step: drive it with the TradeSpace `core` units, which are plain Object Pascal, so both editions share missions and physics. They have not been compiled in Delphi yet.
+8. **One engine for both editions.** The desktop edition now exists (`desktop-atomic-space/`) with its own small rule set. Next step: drive it with the browser edition's `core` units, which are plain Object Pascal, so both editions share missions and physics. They have not been compiled in Delphi yet.
 9. **Translations.** All text is in the Pascal source. Moving it into resource strings would make the game translatable.
 10. **Teacher's guide.** A one-page lesson plan: which mission to use for which idea (inverse-square law, rocket equation, orbits and coverage).
 
@@ -414,4 +416,4 @@ did and what the AI did. Be accurate: judges can see the notes above.
 
 **Desktop edition artwork:** rocket, thruster, crane, background and Moon-mission pictures made by team Blue Atoms. Screenshots on `/desktop` are of the program itself.
 
-**Team Blue Atoms:** add your names here.
+**Team Blue Atoms**, Centre of Science and Technology (COSAT), Khayelitsha: Inam Lubisi, Mehluko Mseleni, Bokamoso Mbakaza, Siqhamo Malashe and Onako Peteni.

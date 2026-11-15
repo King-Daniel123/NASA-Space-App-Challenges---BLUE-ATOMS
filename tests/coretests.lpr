@@ -1,6 +1,6 @@
 program coretests;
 
-{ TradeSpace - command-line checks for the mission engine.
+{ Atomic Space - command-line checks for the mission engine.
 
   Compiled with pas2js for Node.js (see scripts/test.ps1). The same core units
   also run in the browser game, so a pass here means the game logic is sound.
@@ -447,7 +447,7 @@ begin
 end;
 
 begin
-  Writeln('TradeSpace core tests');
+  Writeln('Atomic Space core tests');
   TestCatalog;
   TestPhysics;
   TestShareCode;

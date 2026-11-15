@@ -1,6 +1,6 @@
 unit WebDraw;
 
-{ TradeSpace - everything drawn on a canvas.
+{ Atomic Space - everything drawn on a canvas.
 
   All pictures in the game are drawn by this code from the numbers in the
   mission design: the spacecraft blueprint, the orbit view, the launch, the

@@ -1,4 +1,4 @@
-# TradeSpace - one-time setup: fetch the pas2js compiler.
+# Atomic Space - one-time setup: fetch the pas2js compiler.
 #
 #   powershell -ExecutionPolicy Bypass -File scripts\setup.ps1
 #

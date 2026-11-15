@@ -1,6 +1,6 @@
 program tradespace;
 
-{ TradeSpace - the space mission design game.
+{ Atomic Space - the space mission design game.
 
   Made for the 2026 NASA Space Apps Challenge, "Space Mission Design Game".
 
