@@ -2,7 +2,7 @@
 
 The Windows edition of team Blue Atoms' space mission design game for the
 2026 NASA Space Apps Challenge. Download the built game from
-https://tradespace-blue-atoms.vercel.app/desktop. Gameplay and the trade-offs
+https://cosatblueatoms.earth/desktop. Gameplay and the trade-offs
 are described in the main [README](../README.md#desktop-edition-delphi).
 
 ## Build
@@ -19,7 +19,7 @@ then two folders up, so it runs straight from `Win32\Debug` after a build.
 
 ## Running it from a download
 
-- **Just play:** download the zip from https://tradespace-blue-atoms.vercel.app/desktop, unzip the whole folder and run `AtomicSpace.exe`. Keep the `Assets` folder next to it.
+- **Just play:** download the zip from https://cosatblueatoms.earth/desktop, unzip the whole folder and run `AtomicSpace.exe`. Keep the `Assets` folder next to it.
 - **From the source code (GitHub "Download ZIP" or clone):** open `desktop-atomic-space/AtomicSpace_p.dproj` in Delphi 12 and press Run. The program finds `desktop-atomic-space/Assets` from `Win32\Debug` by itself, so nothing needs copying.
 - The other pictures (backgrounds, logo, crane, president) are stored inside the `.dfm` form files, so the `Assets` folder only holds what the game loads while it runs.
 

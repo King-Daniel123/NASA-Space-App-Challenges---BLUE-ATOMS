@@ -30,7 +30,7 @@ It matters because the trade-offs of mission design usually stay abstract for st
 ## Link to Project Demo
 
 ```
-https://tradespace-blue-atoms.vercel.app/presentation
+https://cosatblueatoms.earth/presentation
 ```
 
 Seven slides, viewable in the browser, with PDF and PowerPoint downloads
@@ -41,11 +41,11 @@ English subtitles.
 ## Link to Final Project
 
 ```
-https://tradespace-blue-atoms.vercel.app
+https://cosatblueatoms.earth
 ```
 
 Source code: `https://github.com/King-Daniel123/NASA-Space-App-Challenges---BLUE-ATOMS`
-Windows desktop edition (Delphi): `https://tradespace-blue-atoms.vercel.app/desktop`
+Windows desktop edition (Delphi): `https://cosatblueatoms.earth/desktop`
 (put this in the description or references so judges can find it).
 
 ## Detailed Project Description
@@ -87,7 +87,7 @@ The whole game is written in Object Pascal (the Delphi language) and compiled to
 
 DESKTOP EDITION
 
-The desktop edition of Atomic Space, our original Windows game, is built in Delphi 12 (VCL) and can be downloaded from https://tradespace-blue-atoms.vercel.app/desktop. Players choose one of three lunar missions modelled on NASA's CAPSTONE, LRO and CLPS, then build a rocket from 18 combinations of ship, thruster and booster count. A live review board checks thrust-to-weight, budget, payload and fuel margin, and up to four players sign off by role. Then they fly the launch with staging, hold lunar orbit, land, and get a scored report that explains the result.
+The desktop edition of Atomic Space, our original Windows game, is built in Delphi 12 (VCL) and can be downloaded from https://cosatblueatoms.earth/desktop. Players choose one of three lunar missions modelled on NASA's CAPSTONE, LRO and CLPS, then build a rocket from 18 combinations of ship, thruster and booster count. A live review board checks thrust-to-weight, budget, payload and fuel margin, and up to four players sign off by role. Then they fly the launch with staging, hold lunar orbit, land, and get a scored report that explains the result.
 ```
 
 ## Use of AI (the form calls it "Super Intelligence")

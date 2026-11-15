@@ -7,11 +7,12 @@
 A space mission design game for one to four players, written in Object Pascal
 (the Delphi language) and played in a web browser.
 
-**Play it now: https://tradespace-blue-atoms.vercel.app**
+**Play it now: https://cosatblueatoms.earth**
+(The original address, https://tradespace-blue-atoms.vercel.app, still works.)
 
-**Windows desktop edition (Delphi VCL): https://tradespace-blue-atoms.vercel.app/desktop**
+**Windows desktop edition (Delphi VCL): https://cosatblueatoms.earth/desktop**
 
-**Presentation (7 slides): https://tradespace-blue-atoms.vercel.app/presentation**
+**Presentation (7 slides): https://cosatblueatoms.earth/presentation**
 ([PDF](public/slides/Atomic_Space_Presentation.pdf) ·
 [PowerPoint with speaker notes](public/slides/Atomic_Space_Presentation.pptx))
 
@@ -215,7 +216,7 @@ a mission's `Offer` list in `TsScenarios.pas`.
 
 ## Desktop edition (Delphi)
 
-**Download: https://tradespace-blue-atoms.vercel.app/desktop**
+**Download: https://cosatblueatoms.earth/desktop**
 (Windows 10/11, 15 MB zip, no install). Source: [desktop-atomic-space/](desktop-atomic-space/).
 
 The desktop edition is the team's original Windows game, built in Delphi 12 (VCL).
@@ -356,8 +357,8 @@ Deadline: **Sunday 15 November 2026, 11:59 p.m.** in your local event's time zon
 - [ ] Every team member is registered for the same local event and shows on the team's Members tab. At most six members.
 - [ ] Open *My Team*, then the *Project* tab, then *Edit*.
 - [ ] Paste the text from [docs/SUBMISSION.md](docs/SUBMISSION.md) into each field. Check every sentence is true for your team and change what is not.
-- [ ] **Link to Final Project:** `https://tradespace-blue-atoms.vercel.app` (the desktop edition is linked from the README and at `/desktop`)
-- [ ] **Link to Project Demo:** the presentation at `https://tradespace-blue-atoms.vercel.app/presentation` (seven slides, with PDF and PowerPoint downloads), or your own video of 30 seconds or less.
+- [ ] **Link to Final Project:** `https://cosatblueatoms.earth` (the desktop edition is linked from the README and at `/desktop`)
+- [ ] **Link to Project Demo:** the presentation at `https://cosatblueatoms.earth/presentation` (seven slides, with PDF and PowerPoint downloads), or your own video of 30 seconds or less.
 - [ ] Open both links in a private browser window to check they work without logging in.
 - [ ] Fill in the *Use of AI* field honestly. See [Use of AI](#use-of-ai).
 - [ ] List every source in the references field. They are in [Credits and references](#credits-and-references).
