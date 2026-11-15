@@ -7,6 +7,8 @@ A space mission design game for one to four players, written in Object Pascal
 
 **Play it now: https://tradespace-blue-atoms.vercel.app**
 
+**Windows desktop edition (Delphi VCL): https://tradespace-blue-atoms.vercel.app/desktop**
+
 Built by team **Blue Atoms** for the 2026 NASA Space Apps Challenge,
 [Space Mission Design Game](https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/).
 TradeSpace is not affiliated with or endorsed by NASA.
@@ -21,11 +23,12 @@ TradeSpace is not affiliated with or endorsed by NASA.
 4. [How to play](#how-to-play)
 5. [How it works](#how-it-works)
 6. [Build it yourself](#build-it-yourself)
-7. [Put it online](#put-it-online)
-8. [The plan](#the-plan)
-9. [Submission checklist](#submission-checklist)
-10. [Use of AI](#use-of-ai)
-11. [Credits and references](#credits-and-references)
+7. [Desktop edition (Delphi)](#desktop-edition-delphi)
+8. [Put it online](#put-it-online)
+9. [The plan](#the-plan)
+10. [Submission checklist](#submission-checklist)
+11. [Use of AI](#use-of-ai)
+12. [Credits and references](#credits-and-references)
 
 ---
 
@@ -204,6 +207,54 @@ Changing the game: edit the `.pas` files, run `build.ps1`, refresh the page.
 To add an instrument, add one `AddInstr` line in `TsCatalog.pas` and its id to
 a mission's `Offer` list in `TsScenarios.pas`.
 
+## Desktop edition (Delphi)
+
+**Download: https://tradespace-blue-atoms.vercel.app/desktop**
+(Windows 10/11, 15 MB zip, no install). Source: [desktop-atomic-space/](desktop-atomic-space/).
+
+*Atomic Space* is the team's original Windows game, built in Delphi 12 (VCL).
+It is the same idea as TradeSpace at a smaller scale: one destination (the
+Moon), three missions, and a launch and landing you fly yourself.
+
+| Step | What happens | Trade-off it teaches |
+| --- | --- | --- |
+| Mission | CubeSat Pathfinder (8 t, $150 M cap), Lunar Science Orbiter (35 t, $220 M), Cargo Lander (80 t, $300 M). Each is matched to a real NASA mission: CAPSTONE, LRO, CLPS/Artemis. | Objectives come first and set the constraints. |
+| Build | 3 ships x 3 thrusters x 2 or 4 boosters = 18 designs. | Bigger ships carry and hold more, but weigh and cost more. |
+| Review board | Live thrust-to-weight, budget, payload and fuel checks. RED blocks launch, AMBER warns, GREEN praises. | Thrust-to-weight below 1.15 wastes fuel; above 2.5 wastes money. |
+| Team go/no-go | 1-4 players on one screen share four roles; each must sign off, and any change resets the sign-offs. | Negotiation between budget, mass, science and fuel. |
+| Launch | Countdown, lift-off only if thrust beats weight, fuel drains live, boosters separate at 100,000 ft. | Newton's second law, staging. |
+| Moon | Hold a 100 km orbit, then land manually or with autopilot. The tank starts as full as the design's fuel margin allows. | Margins decided early matter late. |
+| Report | Score /100 and grade, with the reasons and the real mission it resembles. | Why it worked, not just whether. |
+
+Every mission has between 3 and 6 designs that pass review, and none of them is best on every count.
+
+### Build it from source
+
+Open `desktop-atomic-space/AtomicSpace_p.dproj` in Delphi 12 (Community
+Edition is fine) and press **Shift+F9**. The program finds its `Assets`
+folder next to the `.exe` or two folders up, so it runs from `Win32\Debug`.
+
+Community Edition does not allow the `dcc32` command-line compiler, but the
+IDE can build without opening a window:
+
+```powershell
+& "C:\Program Files (x86)\Embarcadero\Studio\23.0\bin\bds.exe" -ns -b "desktop-atomic-space\AtomicSpace_p.dproj"
+```
+
+To publish a new download: copy `Win32\Debug\AtomicSpace_p.exe` (as
+`AtomicSpace.exe`) and the `Assets` folder into a folder called
+`AtomicSpace-Desktop`, zip it to
+`public/downloads/AtomicSpace-Desktop-Windows.zip`, then deploy.
+
+| File | What it does |
+| --- | --- |
+| `MissionPlan_u.pas` | Missions, part data, review board, scoring. No forms, easy to test. |
+| `Game.pas` | Planner: part picker, mission panel, review board, team sign-off, report. |
+| `Launch_u.pas` | Launch: countdown, physics, fuel, staging, telemetry. |
+| `Unit1.pas` | Moon: orbit hold and landing, manual or autopilot. |
+| `StartUp_u.pas` | Start screen. |
+| `Assets/TextFile/*.txt` | Part data (mass, thrust, fuel, cost). Edit them to rebalance. |
+
 ## Put it online
 
 ### Vercel
@@ -246,6 +297,11 @@ and as a Windows `.exe` could not be hosted on Vercel or opened by a judge
 from a link. The full list of faults is in
 [legacy-delphi-vcl/README.md](legacy-delphi-vcl/README.md).
 
+In parallel the team built *Atomic Space*, a larger Delphi VCL game with a
+rocket builder, a launch scene and a Moon landing, but with no mission
+objectives, no budget or review, and a few bugs. Those are fixed and
+listed in [desktop-atomic-space/README.md](desktop-atomic-space/README.md).
+
 ### What has been done
 
 - [x] Read the challenge, its resources tab, the judging guide and the submission guide.
@@ -258,6 +314,7 @@ from a link. The full list of faults is in
 - [x] Team mode with four roles, conflicting goals and a go/no-go poll.
 - [x] Share links, mission log, example designs, three difficulty levels, sandbox.
 - [x] Deployed to Vercel and pushed to GitHub.
+- [x] Desktop edition: the team's Delphi VCL game *Atomic Space* now has missions, a live review board, team sign-off, staging, fuel limits and a scored report. It is built and tested on Windows and can be downloaded from `/desktop`.
 
 ### What the team must do before the deadline
 
@@ -274,7 +331,7 @@ press *Submit for Judging* before **Sunday 15 November, 11:59 p.m.** local time.
 5. **More missions.** A space telescope at L2 (pointing and cooling drive everything), a Venus orbiter (heat), a comet sample return. Each is one procedure in `TsScenarios.pas`.
 6. **Sound.** Countdown, engine rumble, alerts. Add with care: the rules require any AI-made audio to be declared.
 7. **Phone layout polish.** It works on a phone, but the design lab is built for a laptop screen.
-8. **A Delphi desktop edition.** The `core` units are written to compile in Delphi unchanged. A VCL or FireMonkey front end on top of them would give a native Windows version. Not yet tested in the Delphi IDE.
+8. **One engine for both editions.** The desktop edition now exists (`desktop-atomic-space/`) with its own small rule set. Next step: drive it with the TradeSpace `core` units, which are plain Object Pascal, so both editions share missions and physics. They have not been compiled in Delphi yet.
 9. **Translations.** All text is in the Pascal source. Moving it into resource strings would make the game translatable.
 10. **Teacher's guide.** A one-page lesson plan: which mission to use for which idea (inverse-square law, rocket equation, orbits and coverage).
 
@@ -293,7 +350,7 @@ Deadline: **Sunday 15 November 2026, 11:59 p.m.** in your local event's time zon
 - [ ] Every team member is registered for the same local event and shows on the team's Members tab. At most six members.
 - [ ] Open *My Team*, then the *Project* tab, then *Edit*.
 - [ ] Paste the text from [docs/SUBMISSION.md](docs/SUBMISSION.md) into each field. Check every sentence is true for your team and change what is not.
-- [ ] **Link to Final Project:** `https://tradespace-blue-atoms.vercel.app`
+- [ ] **Link to Final Project:** `https://tradespace-blue-atoms.vercel.app` (the desktop edition is linked from the README and at `/desktop`)
 - [ ] **Link to Project Demo:** the slides at `https://tradespace-blue-atoms.vercel.app/slides/` (seven slides), or your own video of 30 seconds or less.
 - [ ] Put your team name and members on slide 1: edit `public/slides/index.html`, then build and deploy again.
 - [ ] Open both links in a private browser window to check they work without logging in.
@@ -302,6 +359,7 @@ Deadline: **Sunday 15 November 2026, 11:59 p.m.** in your local event's time zon
 - [ ] Tick both boxes and press **Submit for Judging**. You can edit and resubmit until the deadline.
 - [ ] Optional but recommended: request a [FortiGuard web filter classification](https://www.fortiguard.com/faq/wfratingsubmit) for the site (category: Education; company name: N/A) so judges' networks do not block it.
 - [ ] Confirm where the rocket artwork in the old prototype came from, or leave it out (see [legacy-delphi-vcl/README.md](legacy-delphi-vcl/README.md)).
+- [ ] Desktop edition: the team says its artwork is their own. Check the Milky Way photo on the start screen is yours or public domain, and keep the "Mission Director" caricature hidden (it resembles a real person).
 
 How the game lines up with the five judging criteria:
 
@@ -353,5 +411,7 @@ did and what the AI did. Be accurate: judges can see the notes above.
 - Claude (Anthropic) as a coding assistant.
 
 **Licence:** MIT, see [LICENSE](LICENSE). NASA data and images are in the public domain.
+
+**Desktop edition artwork:** rocket, thruster, crane, background and Moon-mission pictures made by team Blue Atoms. Screenshots on `/desktop` are of the program itself.
 
 **Team Blue Atoms:** add your names here.

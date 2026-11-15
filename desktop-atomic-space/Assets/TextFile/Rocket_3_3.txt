@@ -1,0 +1,10 @@
+===================
+Atomic Space Info
+===================
+Space-Ship: Blue Atom
+Structural Mass : 700 000 kg
+Maximum Payload Mass: 120t
+Fuel Tank : 630 000 US gallons
+===================
+Cost : $141 000 000
+===================

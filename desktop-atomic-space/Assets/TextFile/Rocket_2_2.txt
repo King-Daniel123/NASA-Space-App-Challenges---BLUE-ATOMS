@@ -1,0 +1,10 @@
+===================
+Atomic Space Info
+===================
+Space-Ship: Mighty-Eagle
+Structural Mass : 600 000 kg
+Maximum Payload Mass: 90t
+Fuel Tank : 500 500 US gallons
+===================
+Cost : $92 000 000
+===================

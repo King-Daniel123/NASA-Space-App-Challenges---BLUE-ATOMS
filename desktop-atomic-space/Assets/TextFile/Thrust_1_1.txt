@@ -1,0 +1,10 @@
+===================
+Atomic Space Info
+===================
+Space-Ship: Atomic Thruster
+Structural Mass : 2 000 kg
+Thrust Force: 2 800 kN
+Fuel Consumption Rate : 12 US gallons/s
+===================
+Cost : $11 000 000
+===================

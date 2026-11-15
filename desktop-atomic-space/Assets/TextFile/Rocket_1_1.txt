@@ -1,0 +1,11 @@
+===================
+Atomic Space Info
+===================
+Space-Ship: Rowan V
+Structural Mass : 500 000 kg
+Maximum Payload Mass: 70t
+Fuel Tank : 447 500 US gallons
+===================
+Cost : $73 000 000
+=================== 
+

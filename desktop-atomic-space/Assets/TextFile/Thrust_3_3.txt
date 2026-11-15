@@ -1,0 +1,10 @@
+===================
+Atomic Space Info
+===================
+Space-Ship: Nova Thruster
+Structural Mass : 1 500 kg
+Thrust Force: 3 800 kN
+Fuel Consumption Rate : 9 US gallons/s
+===================
+Cost : $24 500 000
+===================

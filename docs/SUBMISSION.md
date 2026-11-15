@@ -45,6 +45,7 @@ https://tradespace-blue-atoms.vercel.app
 ```
 
 Source code: `https://github.com/King-Daniel123/NASA-Space-App-Challenges---BLUE-ATOMS`
+Windows desktop edition (Delphi): `https://tradespace-blue-atoms.vercel.app/desktop`
 (put this in the description or references so judges can find it).
 
 ## Detailed Project Description
@@ -83,6 +84,10 @@ That a class can run a mission in one lesson and come away understanding why eng
 TOOLS
 
 The whole game is written in Object Pascal (the Delphi language) and compiled to JavaScript with the open-source pas2js compiler. Graphics are drawn on HTML canvas by the game's own code. Node.js runs the tests and builds the NASA data snapshot. Hosted on Vercel; source on GitHub under the MIT licence.
+
+DESKTOP EDITION
+
+Atomic Space, our original Windows game, is built in Delphi 12 (VCL) and can be downloaded from https://tradespace-blue-atoms.vercel.app/desktop. Players choose one of three lunar missions modelled on NASA's CAPSTONE, LRO and CLPS, then build a rocket from 18 combinations of ship, thruster and booster count. A live review board checks thrust-to-weight, budget, payload and fuel margin, and up to four players sign off by role. Then they fly the launch with staging, hold lunar orbit, land, and get a scored report that explains the result.
 ```
 
 ## Use of AI (the form calls it "Super Intelligence")

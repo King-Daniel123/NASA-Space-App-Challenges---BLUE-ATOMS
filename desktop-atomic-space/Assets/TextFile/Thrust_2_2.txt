@@ -1,0 +1,10 @@
+===================
+Atomic Space Info
+===================
+Space-Ship: Bold Thruster
+Mass : 2 500 kg
+Thrust Force: 3 300 kN
+Fuel Consumption Rate : 14 US gallons/s
+===================
+Cost : $15 300 000
+===================

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atomic Space Desktop</title>
+<meta name="description" content="Atomic Space: the Windows desktop edition of the Blue Atoms space mission design game, written in Delphi (Object Pascal VCL). 2026 NASA Space Apps Challenge.">
+<meta name="theme-color" content="#070b14">
+<meta name="ai-assistance" content="Code and text on this page and in the desktop edition were written with the help of Claude (Anthropic). Screenshots are of the program itself. No AI-generated images.">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<style>
+  :root {
+    --bg: #070b14; --panel: #0e1524; --panel2: #131c30; --line: #22304d;
+    --text: #e8eef9; --muted: #93a4c3; --accent: #5ad1ff; --accent-ink: #04202d;
+    --good: #4ade80; --warn: #ffb547; --bad: #ff6b78; --real: #c4a1ff;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 var(--sans); }
+  a { color: var(--accent); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 32px 16px 64px; }
+  .top { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; font-size: 14px; color: var(--muted); }
+  .top a { text-decoration: none; }
+  .mark { font-weight: 800; letter-spacing: .08em; color: var(--text); }
+  .mark span { color: var(--real); }
+  h1 { font-size: clamp(30px, 5vw, 46px); line-height: 1.1; margin: 28px 0 10px; letter-spacing: -.02em; }
+  h2 { font-size: 22px; margin: 40px 0 12px; }
+  .lede { color: var(--muted); font-size: 18px; max-width: 720px; margin: 0; }
+  .cta { display: flex; gap: 12px; flex-wrap: wrap; margin: 24px 0 8px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 10px; font-weight: 700; text-decoration: none; border: 1px solid var(--line); color: var(--text); background: var(--panel2); }
+  .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .note { font-size: 13px; color: var(--muted); }
+  figure { margin: 28px 0 0; }
+  figure img { width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid var(--line); }
+  figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .card h3 { margin: 0 0 6px; font-size: 16px; }
+  .card p { margin: 0; color: var(--muted); font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  .scroll { overflow-x: auto; }
+  ol li { margin-bottom: 6px; }
+  code { font-family: var(--mono); font-size: 13px; background: var(--panel2); padding: 1px 6px; border-radius: 6px; overflow-wrap: anywhere; }
+  .tag { display: inline-block; font-size: 12px; font-weight: 700; padding: 1px 8px; border-radius: 999px; }
+  .red { background: rgba(255,107,120,.15); color: var(--bad); }
+  .amber { background: rgba(255,181,71,.15); color: var(--warn); }
+  .green { background: rgba(74,222,128,.15); color: var(--good); }
+  footer { margin-top: 48px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="top">
+    <span class="mark">ATOMIC<span>SPACE</span></span>
+    <span>·</span><span>Team Blue Atoms</span>
+    <span class="spacer" style="flex:1"></span>
+    <a href="/">Play TradeSpace in the browser →</a>
+  </div>
+
+  <h1>Atomic Space, the desktop edition</h1>
+  <p class="lede">The team's original Windows game, written in Delphi (Object Pascal, VCL).
+  Pick a lunar mission, build the rocket, convince the review board, then launch,
+  stage, fly to the Moon and land. Every part changes cost, mass, thrust and fuel.</p>
+
+  <div class="cta">
+    <a class="btn primary" href="/downloads/AtomicSpace-Desktop-Windows.zip" download>Download for Windows (.zip, 15 MB)</a>
+    <a class="btn" href="https://github.com/King-Daniel123/NASA-Space-App-Challenges---BLUE-ATOMS/tree/main/desktop-atomic-space">Delphi source code</a>
+  </div>
+  <p class="note">Windows 10 or 11. No install: unzip and run <code>AtomicSpace.exe</code>.
+  The program is not code-signed, so SmartScreen may ask you to choose <em>More info</em> then <em>Run anyway</em>.
+  No phone or Mac? <a href="/">TradeSpace</a> runs in any browser.</p>
+
+  <figure>
+    <img src="/desktop-img/desktop-planner.jpg" width="1558" height="956"
+      alt="The Atomic Space mission planner. A rocket with two side boosters stands on the pad. The review board on the right shows the budget, mass, thrust-to-weight ratio of 1.31 and fuel margin, and says GO.">
+    <figcaption>The planner: Rowan V with two Bold thrusters passes review for the CubeSat Pathfinder with $40 M to spare.</figcaption>
+  </figure>
+
+  <h2>How a mission goes</h2>
+  <ol>
+    <li><strong>Choose a mission.</strong> Each has a payload, a cost cap and the fuel the trip needs. They are modelled on NASA's CAPSTONE CubeSat, the Lunar Reconnaissance Orbiter and the CLPS / Artemis cargo landers.</li>
+    <li><strong>Build the rocket.</strong> Three ships, three thrusters, two or four boosters. That makes 18 combinations, and every mission has more than one that works.</li>
+    <li><strong>Pass the review board.</strong> <span class="tag red">RED</span> findings block launch. <span class="tag amber">AMBER</span> ones are risks you choose to accept. <span class="tag green">GREEN</span> ones are strengths.</li>
+    <li><strong>Team go / no-go.</strong> With two to four players, every role has to sign off: Mission Lead, Spacecraft Engineer, Science Lead, and Flight &amp; Comms Lead. Change the design and the sign-offs reset.</li>
+    <li><strong>Launch.</strong> Countdown, lift-off only if thrust beats weight, fuel drains in real time, and the boosters separate at 100,000 ft.</li>
+    <li><strong>Fly to the Moon.</strong> Hold a 100 km orbit, then land by hand or with the autopilot. A thin fuel margin at design time means a low tank now.</li>
+    <li><strong>Read the report.</strong> You get a score out of 100 and a grade, the reasons behind them, and the real mission yours resembles.</li>
+  </ol>
+
+  <h2>The trade-offs</h2>
+  <div class="grid">
+    <div class="card"><h3>Thrust-to-weight</h3><p>Thrust ÷ (mass × 9.81). Below 1 the rocket cannot leave the pad. Below 1.15 it wastes fuel fighting gravity. Above 2.5 you paid for thrust you did not need.</p></div>
+    <div class="card"><h3>Budget</h3><p>Ship + boosters + payload must fit the cost cap. Keeping a 20% reserve scores best, because real projects that overrun get cancelled.</p></div>
+    <div class="card"><h3>Payload vs ship</h3><p>Bigger ships carry more and hold more fuel, but they are heavier and dearer, so they need more boosters.</p></div>
+    <div class="card"><h3>Fuel margin</h3><p>The tank has to cover the trip. The spare fuel is what you get to land with.</p></div>
+  </div>
+
+  <h2>Ships and thrusters</h2>
+  <div class="scroll">
+  <table>
+    <tr><th>Part</th><th>Mass</th><th>Thrust / payload</th><th>Fuel</th><th>Cost</th></tr>
+    <tr><td>Rowan V (ship)</td><td>500 t</td><td>70 t payload</td><td>447,500 gal</td><td>$73 M</td></tr>
+    <tr><td>Mighty-Eagle (ship)</td><td>600 t</td><td>90 t payload</td><td>500,500 gal</td><td>$92 M</td></tr>
+    <tr><td>Blue Atom (ship)</td><td>700 t</td><td>120 t payload</td><td>630,000 gal</td><td>$141 M</td></tr>
+    <tr><td>Atomic Thruster</td><td>2.0 t</td><td>2,800 kN</td><td>12 gal/s</td><td>$11 M each</td></tr>
+    <tr><td>Bold Thruster</td><td>2.5 t</td><td>3,300 kN</td><td>14 gal/s</td><td>$15.3 M each</td></tr>
+    <tr><td>Nova Thruster</td><td>1.5 t</td><td>3,800 kN</td><td>9 gal/s</td><td>$24.5 M each</td></tr>
+  </table>
+  </div>
+  <p class="note">These are simplified teaching values, not engineering data.</p>
+
+  <figure>
+    <img src="/desktop-img/desktop-start.jpg" width="958" height="718" alt="The Atomic Space start screen: the game title over a photograph of the Milky Way, with Start and How to play buttons.">
+    <figcaption>The start screen.</figcaption>
+  </figure>
+
+  <h2>Two editions, one team</h2>
+  <p><a href="/">TradeSpace</a> is the full browser game: five missions from Earth orbit to Europa, live NASA data (EONET, DONKI, NeoWs, GIBS), and 15 instruments.
+  It is written in Object Pascal too, compiled to JavaScript with pas2js.
+  Atomic Space is the Delphi desktop game it grew from, now with mission choice, a review board, team sign-off and scoring.</p>
+
+  <footer>
+    Built by team Blue Atoms for the 2026 NASA Space Apps Challenge, <a href="https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/">Space Mission Design Game</a>.
+    Not affiliated with or endorsed by NASA. Game artwork by the team. The code and text were written with help from Claude (Anthropic).
+    Download SHA-256: <code>bac6ff9c1b6c4a58febb31ad9b99501882b8aec1b39f523c855dba5b0a2515ef</code>
+  </footer>
+</main>
+</body>
+</html>
