@@ -250,7 +250,7 @@ from a link. The full list of faults is in
 
 - [x] Read the challenge, its resources tab, the judging guide and the submission guide.
 - [x] Moved from a Windows program to Object Pascal compiled for the browser, so the game stays in Pascal and runs from a link.
-- [x] Mission engine: catalogue, analysis, review findings, simulation, scoring (about 5,000 lines of Object Pascal, out of roughly 10,000 in the project), with 750 automated checks.
+- [x] Mission engine: catalogue, analysis, review findings, simulation, scoring (about 5,000 lines of Object Pascal, out of roughly 10,000 in the project), with 765 automated checks.
 - [x] Five missions, 15 instruments, 12 launch vehicles, 40 subsystem options, 27 glossary terms.
 - [x] Live NASA data in the gameplay: EONET, DONKI, NeoWs, GIBS.
 - [x] All screens: title, setup, briefing, design lab, review board, mission control, report, mission log.
@@ -309,7 +309,7 @@ How the game lines up with the five judging criteria:
 | --- | --- |
 | Impact | Any student with a browser can run a whole mission in ten minutes, alone or as a class of four. No install, no account, free. |
 | Creativity | Real events on Earth choose your targets. A real asteroid sets your deadline. Real solar storms hit your spacecraft. The ripple line makes trade-offs visible. |
-| Validity | Rocket equation, inverse-square laws, energy balance and link budget, checked by 750 tests against real missions. |
+| Validity | Rocket equation, inverse-square laws, energy balance and link budget, checked by 765 tests against real missions. |
 | Relevance | Covers every objective and almost every "potential consideration" of the challenge, with four NASA data services at the centre of play. |
 | Presentation | Seven-slide demo, this README, and a game that explains itself. |
 

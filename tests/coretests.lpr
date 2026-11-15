@@ -401,6 +401,7 @@ var
   I: Integer;
   D: TDesign;
   A: TAnalysis;
+  Df: TDifficulty;
 begin
   { Every built-in example must pass the review board. }
   for I := 0 to High(Scenarios) do
@@ -410,6 +411,13 @@ begin
     Report('EXAMPLE for ' + Scenarios[I].Name, D);
     Check(A.Blockers = 0, 'example design for ' + Scenarios[I].Id + ' closes');
     Check(A.SciencePct >= Scenarios[I].ThresholdPct, 'example design for ' + Scenarios[I].Id + ' meets minimum science');
+    { It must also pass on the easiest and the hardest level, where the cost cap differs. }
+    for Df := Low(TDifficulty) to High(TDifficulty) do
+    begin
+      A := Analyze(ExampleDesign(I, Df, False));
+      Check(A.Blockers = 0, 'example design for ' + Scenarios[I].Id + ' closes at level ' + DifficultyName[Df] +
+        ' (cost ' + FmtMoney(A.CostTotal) + ' of ' + FmtMoney(A.CapM) + ')');
+    end;
   end;
 end;
 

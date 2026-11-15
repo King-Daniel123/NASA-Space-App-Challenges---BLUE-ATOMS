@@ -81,7 +81,9 @@ begin
     Use(D, pkAntenna, 'patch');
     Use(D, pkBand, 'x');
     Use(D, pkTx, 'tx5');
-    Use(D, pkGround, 'standard');
+    { Near Earth, X-band is so fast that a couple of passes a day is plenty.
+      The cheapest ground plan keeps this design under the cap at every level. }
+    Use(D, pkGround, 'basic');
     D.SolarM2 := 1.0;
     D.BatteryWh := 250;
     D.LifeYears := 3;

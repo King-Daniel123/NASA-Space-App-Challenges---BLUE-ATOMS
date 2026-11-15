@@ -10159,7 +10159,7 @@ rtl.module("TsExamples",["System","TsTypes"],function () {
       $impl.Use(D,6,"patch");
       $impl.Use(D,7,"x");
       $impl.Use(D,8,"tx5");
-      $impl.Use(D,9,"standard");
+      $impl.Use(D,9,"basic");
       D.SolarM2 = 1.0;
       D.BatteryWh = 250;
       D.LifeYears = 3;
