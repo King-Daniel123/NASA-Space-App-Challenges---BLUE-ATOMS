@@ -17,6 +17,12 @@ Open `AtomicSpace_p.dproj` in Delphi 12 (Community Edition works) and press
 The program looks for `Assets\` next to the `.exe`, then in `Win32\Debug\`,
 then two folders up, so it runs straight from `Win32\Debug` after a build.
 
+## Running it from a download
+
+- **Just play:** download the zip from https://tradespace-blue-atoms.vercel.app/desktop, unzip the whole folder and run `AtomicSpace.exe`. Keep the `Assets` folder next to it.
+- **From the source code (GitHub "Download ZIP" or clone):** open `desktop-atomic-space/AtomicSpace_p.dproj` in Delphi 12 and press Run. The program finds `desktop-atomic-space/Assets` from `Win32\Debug` by itself, so nothing needs copying.
+- The other pictures (backgrounds, logo, crane, president) are stored inside the `.dfm` form files, so the `Assets` folder only holds what the game loads while it runs.
+
 ## What changed for the hackathon
 
 | Was | Now |
@@ -31,6 +37,7 @@ then two folders up, so it runs straight from `Win32\Debug` after a build.
 | No result at the end. | Mission report: score out of 100 (design 60, flight 40), a grade, the reasons, and the real mission it resembles. |
 | Images loaded with paths relative to the working folder, so the game failed when started from anywhere else. | `AssetFile()` resolves every path from the program's own folder. |
 | `<` did not update the Moon-scene rocket; the Base/Thrusters buttons were hidden under the text box. | Fixed. |
+| Built from source, LAUNCH and the Moon mission stopped with "Rocket image file not found": two screens only looked next to the `.exe`. | Every screen now uses the same `AssetFile()` search. |
 | `if (height >= 5000)` compared the window height, not the altitude. | `iheight`. |
 | Closing the planner left the program running in the background (the start screen is the hidden main form). | Closing the planner exits the game. |
 | The launch window was titled "SKYWARD" and "Form1". | Titled "Atomic Space". |

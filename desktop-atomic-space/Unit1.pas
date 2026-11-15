@@ -85,7 +85,7 @@ function ShowAtomicMission(const RocketFileName: string;
 implementation
 
 uses
-  System.Math;
+  System.Math, MissionPlan_u;
 
 {$R *.dfm}
 
@@ -161,9 +161,8 @@ var
 begin
   RocketPath := RocketFileName;
   if not FileExists(RocketPath) then
-    RocketPath := IncludeTrailingPathDelimiter(
-      ExtractFilePath(ParamStr(0))) + 'Assets\Base_Models\' +
-      ExtractFileName(RocketFileName);
+    RocketPath := AssetFile('Assets\Base_Models\' +
+      ExtractFileName(RocketFileName));
   if not FileExists(RocketPath) then
     raise Exception.CreateFmt('Selected rocket image was not found: %s',
       [RocketFileName]);

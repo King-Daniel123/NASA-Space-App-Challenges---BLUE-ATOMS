@@ -120,6 +120,9 @@ var
 
 implementation
 
+uses
+  MissionPlan_u;
+
 {$R *.dfm}
 
 const
@@ -519,11 +522,12 @@ var
 
   function AssetPath(const FileName: string): string;
   begin
-    Result := IncludeTrailingPathDelimiter(BasePath) + FileName;
+    { Same search as the rest of the game: next to the .exe, in Win32\Debug,
+      or in the project folder two levels up (a build from source). }
+    Result := AssetFile(FileName);
     if not FileExists(Result) then
-      Result := IncludeTrailingPathDelimiter(BasePath) + 'Win32\Debug\' + FileName;
-    if not FileExists(Result) then
-      raise EFOpenError.CreateFmt('Rocket image file not found: %s', [FileName]);
+      raise EFOpenError.CreateFmt('Rocket image file not found: %s. ' +
+        'Keep the Assets folder next to the program.', [FileName]);
   end;
 
 begin
