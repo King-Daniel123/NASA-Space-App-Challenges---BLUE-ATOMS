@@ -9505,7 +9505,7 @@ rtl.module("WebViews",["System","SysUtils","Math","TsTypes"],function () {
     };
     $impl.Footer = function () {
       var Result = "";
-      Result = '<footer class="foot">Atomic Space was made for the 2026 NASA Space Apps Challenge. ' + "It is not affiliated with or endorsed by NASA. Data: NASA EONET, DONKI, NeoWs and GIBS. " + '<button type="button" class="btn btn-ghost btn-small" data-act="about">About, sources and AI disclosure</button></footer>';
+      Result = '<footer class="foot">Atomic Space was made for the 2026 NASA Space Apps Challenge. ' + "It is not affiliated with or endorsed by NASA. Data: NASA EONET, DONKI, NeoWs and GIBS. " + '<a class="btn btn-ghost btn-small" href="/presentation">Presentation</a>' + '<a class="btn btn-ghost btn-small" href="/desktop">Windows desktop edition</a>' + '<button type="button" class="btn btn-ghost btn-small" data-act="about">About, sources and AI disclosure</button></footer>';
       return Result;
     };
     $impl.Stat = function (ALabel, AValue) {

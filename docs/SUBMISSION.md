@@ -30,11 +30,11 @@ It matters because the trade-offs of mission design usually stay abstract for st
 ## Link to Project Demo
 
 ```
-https://tradespace-blue-atoms.vercel.app/slides/
+https://tradespace-blue-atoms.vercel.app/presentation
 ```
 
-Seven slides. Before you submit, put your team members' names on slide 1
-(edit `public/slides/index.html`, then deploy again). If you would rather use
+Seven slides, viewable in the browser, with PDF and PowerPoint downloads
+(the PowerPoint has the presenter script in its speaker notes). If you would rather use
 a video, it must be 30 seconds or less, and a video in another language needs
 English subtitles.
 

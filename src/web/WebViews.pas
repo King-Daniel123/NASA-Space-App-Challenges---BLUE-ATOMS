@@ -79,6 +79,8 @@ function Footer: string;
 begin
   Result := '<footer class="foot">Atomic Space was made for the 2026 NASA Space Apps Challenge. ' +
     'It is not affiliated with or endorsed by NASA. Data: NASA EONET, DONKI, NeoWs and GIBS. ' +
+    '<a class="btn btn-ghost btn-small" href="/presentation">Presentation</a>' +
+    '<a class="btn btn-ghost btn-small" href="/desktop">Windows desktop edition</a>' +
     '<button type="button" class="btn btn-ghost btn-small" data-act="about">About, sources and AI disclosure</button></footer>';
 end;
 

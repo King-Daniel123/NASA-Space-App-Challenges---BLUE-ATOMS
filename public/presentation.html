@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atomic Space Presentation</title>
+<meta name="description" content="The 7-slide Atomic Space presentation by Team Blue Atoms (COSAT, Khayelitsha) for the 2026 NASA Space Apps Challenge. View it here or download the PowerPoint or PDF.">
+<meta name="theme-color" content="#070b14">
+<meta name="ai-assistance" content="The slides and this page were made with the help of Claude (Anthropic). Slide pictures are screenshots of the game itself. No AI-generated images.">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<style>
+  :root {
+    --bg: #070b14; --panel: #0e1524; --panel2: #131c30; --line: #22304d;
+    --text: #e8eef9; --muted: #93a4c3; --accent: #5ad1ff; --accent-ink: #04202d;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 var(--sans); }
+  a { color: var(--accent); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 32px 16px 64px; }
+  .top { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; font-size: 14px; color: var(--muted); }
+  .top a { text-decoration: none; }
+  .mark { font-weight: 800; letter-spacing: .08em; color: var(--text); }
+  .mark span { color: var(--accent); }
+  .team { display: flex; gap: 16px; align-items: center; margin-top: 28px; }
+  .team img { width: 64px; height: 64px; border-radius: 12px; flex: none; }
+  .team p { margin: 0; color: var(--muted); font-size: 14px; }
+  .team strong { color: var(--text); display: block; font-size: 15px; }
+  h1 { font-size: clamp(30px, 5vw, 46px); line-height: 1.1; margin: 22px 0 10px; letter-spacing: -.02em; }
+  h2 { font-size: 22px; margin: 40px 0 12px; }
+  .lede { color: var(--muted); font-size: 18px; max-width: 720px; margin: 0; }
+  .cta { display: flex; gap: 12px; flex-wrap: wrap; margin: 24px 0 8px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 10px; font-weight: 700; text-decoration: none; border: 1px solid var(--line); color: var(--text); background: var(--panel2); }
+  .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .note { font-size: 13px; color: var(--muted); }
+  .slides { display: grid; gap: 28px; margin-top: 28px; }
+  figure { margin: 0; }
+  figure img { width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid var(--line); background: var(--panel); }
+  figcaption { font-size: 14px; color: var(--muted); margin-top: 8px; }
+  figcaption b { color: var(--text); }
+  footer { margin-top: 48px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="top">
+    <span class="mark">ATOMIC<span>SPACE</span></span>
+    <span>·</span><span>Team Blue Atoms</span>
+    <span style="flex:1"></span>
+    <a href="/">Play in the browser →</a>
+    <a href="/desktop">Windows desktop edition →</a>
+  </div>
+
+  <div class="team">
+    <img src="/assets/blue-atoms-logo.png" width="512" height="512" alt="Blue Atoms logo: a white atom on light blue">
+    <p><strong>Team Blue Atoms</strong>Centre of Science and Technology (COSAT), Khayelitsha · 2026 NASA Space Apps Challenge, Cape Town</p>
+  </div>
+
+  <h1>Atomic Space: the presentation</h1>
+  <p class="lede">Seven slides: <em>Beyond Earth, Designing the Next Space Mission</em>. Why mission design is hard, the NASA data and physics behind the game, how we built it in Delphi, and the team.</p>
+
+  <div class="cta">
+    <a class="btn primary" href="/slides/Atomic_Space_Presentation.pdf">Open the slides (PDF)</a>
+    <a class="btn" href="/slides/Atomic_Space_Presentation.pptx" download>Download PowerPoint (.pptx, 1 MB)</a>
+    <a class="btn" href="https://github.com/King-Daniel123/NASA-Space-App-Challenges---BLUE-ATOMS/tree/main/public/slides">On GitHub</a>
+  </div>
+  <p class="note">The PowerPoint includes the full presenter script in the speaker notes. The PDF opens in any browser.</p>
+
+  <div class="slides">
+    <figure>
+      <img src="/presentation-img/slide-1.jpg" width="1601" height="900" loading="lazy" alt="Slide 1. Beyond Earth: Designing the Next Space Mission. Team Blue Atoms, COSAT Khayelitsha. Atomic Space, a space mission design game written in Delphi, with a screenshot of the launch screen.">
+      <figcaption><b>1 · Introduction.</b> Apollo 13 showed that in space, one decision can change the whole mission. What if you could make those decisions?</figcaption>
+    </figure>
+    <figure>
+      <img src="/presentation-img/slide-2.jpg" width="1601" height="900" loading="lazy" alt="Slide 2. Every choice has a price. A rocket design with thrust-to-weight 0.93 gets a NO-GO from the review board. Four steps: mission, design, review, launch.">
+      <figcaption><b>2 · The challenge.</b> A cost cap, a payload and a fuel bill. Too weak a rocket never leaves the pad; too many boosters and the budget is gone.</figcaption>
+    </figure>
+    <figure>
+      <img src="/presentation-img/slide-3.jpg" width="1601" height="900" loading="lazy" alt="Slide 3. Connected to real NASA science: EONET, DONKI, NeoWs and GIBS, and missions modelled on CAPSTONE, LRO and CLPS.">
+      <figcaption><b>3 · Real-world data.</b> NASA EONET, DONKI, NeoWs and GIBS, and missions modelled on CAPSTONE, LRO and the CLPS landers.</figcaption>
+    </figure>
+    <figure>
+      <img src="/presentation-img/slide-4.jpg" width="1601" height="900" loading="lazy" alt="Slide 4. The physics behind your mission: thrust-to-weight above 1, data rate falls with distance squared, science has diminishing returns.">
+      <figcaption><b>4 · The physics.</b> Thrust must beat weight, data falls with the square of distance, and science returns level off.</figcaption>
+    </figure>
+    <figure>
+      <img src="/presentation-img/slide-5.jpg" width="1601" height="900" loading="lazy" alt="Slide 5. Design it. Manage it. Launch it. Screenshots of the planner, the Moon orbit and the launch, and why Delphi: Object Pascal, a Windows exe, then HTML and JavaScript through pas2js.">
+      <figcaption><b>5 · Our solution.</b> You design, manage and fly the mission. Written in Delphi, then compiled to HTML and JavaScript so it runs from a link.</figcaption>
+    </figure>
+    <figure>
+      <img src="/presentation-img/slide-6.jpg" width="1601" height="900" loading="lazy" alt="Slide 6. Five minds, one mission: Inam Lubisi, Mehluko Mseleni, Bokamoso Mbakaza, Siqhamo Malashe and Onako Peteni.">
+      <figcaption><b>6 · The team.</b> Inam Lubisi, Mehluko Mseleni, Bokamoso Mbakaza, Siqhamo Malashe and Onako Peteni.</figcaption>
+    </figure>
+    <figure>
+      <img src="/presentation-img/slide-7.jpg" width="1601" height="900" loading="lazy" alt="Slide 7. Will your mission succeed? Think beyond. Design beyond. Explore beyond. Links to play, download and the source code.">
+      <figcaption><b>7 · Conclusion.</b> Think beyond. Design beyond. Explore beyond. Your mission starts here.</figcaption>
+    </figure>
+  </div>
+
+  <footer>
+    Made by Team Blue Atoms for the 2026 NASA Space Apps Challenge, <a href="https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/">Space Mission Design Game</a>.
+    Not affiliated with or endorsed by NASA. The slides were made with the help of Claude (Anthropic); their pictures are screenshots of the game.
+  </footer>
+</main>
+</body>
+</html>

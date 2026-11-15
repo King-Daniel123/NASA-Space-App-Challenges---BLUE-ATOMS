@@ -11,6 +11,10 @@ A space mission design game for one to four players, written in Object Pascal
 
 **Windows desktop edition (Delphi VCL): https://tradespace-blue-atoms.vercel.app/desktop**
 
+**Presentation (7 slides): https://tradespace-blue-atoms.vercel.app/presentation**
+([PDF](public/slides/Atomic_Space_Presentation.pdf) ·
+[PowerPoint with speaker notes](public/slides/Atomic_Space_Presentation.pptx))
+
 Built by team **Blue Atoms** for the 2026 NASA Space Apps Challenge,
 [Space Mission Design Game](https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/).
 Atomic Space is not affiliated with or endorsed by NASA.
@@ -353,8 +357,7 @@ Deadline: **Sunday 15 November 2026, 11:59 p.m.** in your local event's time zon
 - [ ] Open *My Team*, then the *Project* tab, then *Edit*.
 - [ ] Paste the text from [docs/SUBMISSION.md](docs/SUBMISSION.md) into each field. Check every sentence is true for your team and change what is not.
 - [ ] **Link to Final Project:** `https://tradespace-blue-atoms.vercel.app` (the desktop edition is linked from the README and at `/desktop`)
-- [ ] **Link to Project Demo:** the slides at `https://tradespace-blue-atoms.vercel.app/slides/` (seven slides), or your own video of 30 seconds or less.
-- [ ] Put your team name and members on slide 1: edit `public/slides/index.html`, then build and deploy again.
+- [ ] **Link to Project Demo:** the presentation at `https://tradespace-blue-atoms.vercel.app/presentation` (seven slides, with PDF and PowerPoint downloads), or your own video of 30 seconds or less.
 - [ ] Open both links in a private browser window to check they work without logging in.
 - [ ] Fill in the *Use of AI* field honestly. See [Use of AI](#use-of-ai).
 - [ ] List every source in the references field. They are in [Credits and references](#credits-and-references).
